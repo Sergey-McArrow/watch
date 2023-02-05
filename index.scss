@@ -1,7 +1,16 @@
+@import url('https://use.typekit.net/blp3bvg.css');
+
 body {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	font-family: 'myriad-pro', sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 32px;
+	margin: 0;
+	padding: 0;
 }
 
 .main-content {
@@ -13,11 +22,16 @@ body {
 	width: 80%;
 	padding: 2rem 0;
 	.img-icon {
-		width: 30%;
+		width: 25%;
 	}
 	.typography-title {
-		width: 50%;
+		width: 40%;
 		text-align: center;
+		font-family: 'Myriad Pro';
+		color: rgb(0, 0, 0);
+		line-height: 1.2;
+		text-align: center;
+		z-index: 5;
 	}
 	.img-main {
 		width: 70%;
@@ -25,5 +39,90 @@ body {
 	.typography-description {
 		width: 50%;
 		text-align: center;
+		font-family: 'Myriad Pro';
+		color: rgb(0, 0, 0);
+		line-height: 1.2;
+		z-index: 9;
+	}
+}
+.secondary-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+
+	.img-secondary {
+		width: 100%;
+	}
+	.typography-water-protection {
+		width: 50%;
+		text-align: center;
+		font-family: 'Myriad Pro';
+		color: rgb(0, 0, 0);
+		line-height: 1.2;
+		z-index: 9;
+	}
+	.img-water-protection {
+		width: 70%;
+	}
+}
+.functions {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+
+	&-image {
+		width: 100%;
+	}
+}
+
+.main-features {
+	width: 80%;
+	padding: 3rem 1rem;
+	.features-title {
+		text-align: center;
+	}
+	.features-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		gap: 2rem;
+		.features-description {
+			width: 30%;
+			padding: 2rem 1rem;
+			position: relative;
+
+			&:not(:last-child):not(:nth-last-child(2)):after {
+				content: ' ';
+				position: absolute;
+				bottom: 0;
+				left: 1rem;
+				width: 40%;
+				border-bottom: 1px solid black;
+			}
+		}
+	}
+}
+.equipment {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	&-image {
+		width: 100%;
+	}
+}
+@media (max-width: 900px) {
+	body {
+		font-size: 24px;
+	}
+}
+
+@media (max-width: 480px) {
+	body {
+		font-size: 17px;
 	}
 }
